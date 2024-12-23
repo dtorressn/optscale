@@ -127,7 +127,7 @@ ansible-playbook -e "ansible_ssh_user=<user>" -k -K -i "<ip address>," ansible/k
 where `<user>` - actual username; `<ip address>` - host ip address,
 ip address should be private address of the machine, you can check it with the command `ip a`.
 
-**Note:** do not use `127.0.0.1` or `localhost` as the hostname. Instead, prefer providing the hostname (check with the command `hostname`) and make sure it is resolveable from host that willl run the Ansible Playbooks (if needed, add to the /etc/hosts files).
+**Note:** do not use `127.0.0.1` or `localhost` as the hostname. Instead, prefer providing the server's hostname (check with the command `hostname`) and make sure it is resolveable from host that the Ansible Playbooks ran from (if needed, add to the ``/etc/hosts`` files).
 
 If your deployment server is the service-host server, add `-e "ansible_connection=local"` to the ansible command.
 
